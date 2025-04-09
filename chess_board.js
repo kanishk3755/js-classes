@@ -1,8 +1,7 @@
 // Create the chessboard container
 const board = document.createElement("div");
-board.style.display = "grid";
-board.style.gridTemplateColumns = "repeat(8, 60px)";
-board.style.gridTemplateRows = "repeat(8, 60px)";
+board.style.display = "flex";
+board.style.flexWrap = "wrap";
 board.style.width = "480px";
 board.style.height = "480px";
 board.style.border = "2px solid black";
@@ -14,7 +13,7 @@ for (let row = 0; row < 8; row++) {
     const square = document.createElement("div");
     const isBlack = (row + col) % 2 === 1;
 
-    square.style.width = "60px";
+    square.style.flex = "0 0 60px";
     square.style.height = "60px";
     square.style.backgroundColor = isBlack ? "black" : "white";
     board.appendChild(square);

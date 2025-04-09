@@ -1,0 +1,40 @@
+.box4{
+  display: flex;
+  gap: 20px;
+  border: 2px solid black;
+}
+
+.box1{
+  background-color: red;
+  height:50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box2{
+  background-color: aqua;
+  height:50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box3{
+  background-color: blue;
+  height:50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.div5{
+  background-color: blueviolet;
+  width: 150px;
+  margin: 0 auto;
+}
+
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
