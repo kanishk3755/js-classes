@@ -1,9 +1,7 @@
-// === CONFIG ===
 const rows = 10;
 const cols = 10;
 const totalMines = 10;
 
-// === CSS using DOM + Flexbox ===
 const style = document.createElement('style');
 document.head.appendChild(style);
 const sheet = style.sheet;
@@ -63,7 +61,6 @@ sheet.insertRule(`
   }
 `, sheet.cssRules.length);
 
-// === Create Game Board ===
 const grid = document.createElement('div');
 grid.className = 'grid';
 document.body.appendChild(grid);
@@ -71,14 +68,12 @@ document.body.appendChild(grid);
 let board = [];
 let mineSet = new Set();
 
-// Place random mines
 while (mineSet.size < totalMines) {
   const r = Math.floor(Math.random() * rows);
   const c = Math.floor(Math.random() * cols);
   mineSet.add(`${r},${c}`);
 }
 
-// Initialize cells
 for (let r = 0; r < rows; r++) {
   board[r] = [];
   for (let c = 0; c < cols; c++) {
@@ -98,7 +93,6 @@ for (let r = 0; r < rows; r++) {
   }
 }
 
-// === Game Logic ===
 function handleLeftClick(e) {
   const cellEl = e.target;
   const row = +cellEl.dataset.row;
