@@ -1,4 +1,3 @@
-// 1. Array of image URLs (add more than 15 to test limit)
 const images = [
   "https://yt3.googleusercontent.com/ytc/AIdro_k7CMY7TJWlKb4p9-cE3wR4lluDRUTZXc0XBEW1_3s-nw=s900-c-k-c0x00ffffff-no-rj",
   "https://via.placeholder.com/300x200?text=Image+2",
@@ -17,7 +16,6 @@ const images = [
   "https://via.placeholder.com/300x200?text=Image+15"
 ];
 
-// 2. Create and inject styles with 3-column flex layout
 const style = document.createElement('style');
 document.head.appendChild(style);
 const sheet = style.sheet;
@@ -58,12 +56,10 @@ sheet.insertRule(`.gallery-item img {
   display: block;
 }`, sheet.cssRules.length);
 
-// 3. Create the gallery container
 const container = document.createElement('div');
 container.className = 'gallery-container';
 document.body.appendChild(container);
 
-// 4. Add only the first 15 images (5 rows × 3 columns)
 const maxItems = 5 * 3;
 for (let i = 0; i < maxItems; i++) {
   const item = document.createElement('div');
