@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // === Add Styling Dynamically ===
+  
   const style = document.createElement('style');
   style.textContent = `
     body {
@@ -50,21 +50,19 @@ document.addEventListener('DOMContentLoaded', () => {
   `;
   document.head.appendChild(style);
 
-  // === Create Main App Container ===
+  
   const app = document.createElement('div');
   app.className = 'todo-app';
   document.body.appendChild(app); // << Append to body!
 
-  // === Title ===
   const title = document.createElement('h2');
   title.textContent = '📝 To-Do List';
   app.appendChild(title);
 
-  // === Task List Container ===
   const taskList = document.createElement('div');
   app.appendChild(taskList);
 
-  // === Initial Tasks ===
+//Initial tasks
   const tasks = [
     { name: 'Sing', done: false },
     { name: 'Dance', done: false },
@@ -73,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
     { name: 'Run', done: false },
   ];
 
-  // === Render a Task ===
+  // task render
   function renderTask(task) {
     const taskEl = document.createElement('div');
     taskEl.className = 'task';
@@ -97,10 +95,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // === Render All Initial Tasks ===
+  // render all initial tasks
   tasks.forEach(renderTask);
 
-  // === Add New Task Section ===
+  //add new tasks
   const addSection = document.createElement('div');
   addSection.className = 'add-section';
 
@@ -115,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
   addSection.appendChild(button);
   app.appendChild(addSection);
 
-  // === Handle New Task Addition ===
+  // handle new task addition
   button.addEventListener('click', () => {
     const taskName = input.value.trim();
     if (taskName === '') return;
