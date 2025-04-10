@@ -1,1 +1,1 @@
-JS classes beigin..
+JS classes begin..
