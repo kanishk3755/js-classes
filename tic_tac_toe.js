@@ -1,11 +1,10 @@
-// === STYLE SETUP ===
 document.body.style.fontFamily = "sans-serif";
 document.body.style.display = "flex";
 document.body.style.flexDirection = "column";
 document.body.style.alignItems = "center";
 document.body.style.marginTop = "40px";
 
-// === CREATE GAME ELEMENTS ===
+//  CREATE GAME ELEMENTS
 const game = document.createElement("div");
 game.id = "game";
 Object.assign(game.style, {
@@ -34,7 +33,7 @@ Object.assign(resetBtn.style, {
 });
 document.body.appendChild(resetBtn);
 
-// === GAME LOGIC ===
+// Game logic
 let currentPlayer = "X";
 let board = Array(9).fill("");
 
@@ -110,5 +109,4 @@ resetBtn.addEventListener("click", () => {
   createBoard();
 });
 
-// Start game
 createBoard();
